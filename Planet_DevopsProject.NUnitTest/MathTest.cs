@@ -23,9 +23,9 @@ namespace Planet_DevopsProject.NUnitTest
             
             var result = _math.Addition(1, 2);
 
-            Assert.That(result, Is.EqualTo(3));
+            Assert.That(result, Is.EqualTo(42));
         }
-
+        
         [Test]
         public void Subtract_WhenCalled_ReturnTheSumOfArguments()
         {
