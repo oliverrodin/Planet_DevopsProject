@@ -26,7 +26,7 @@ steps:
   inputs:
     command: 'test'
     arguments: '--no-build --configuration $(buildConfiguration)'
-    publishTestResults: true
+    publishTestResults: false
     projects: '**/*.NUnitTest.csproj'
 
 
