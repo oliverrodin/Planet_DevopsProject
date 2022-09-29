@@ -64,7 +64,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: false
-    projects: 'src/SimpleApi/SimpleApi.csproj'
+    projects: 'Planet_DevopsProject/Planet_DevopsProject/Planet_DevopsProject.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: true
 
