@@ -23,7 +23,7 @@ namespace Planet_DevopsProject.NUnitTest
             
             var result = _math.Addition(1, 2);
 
-            Assert.That(result, Is.EqualTo(42));
+            Assert.That(result, Is.EqualTo(3));
         }
         
         [Test]
