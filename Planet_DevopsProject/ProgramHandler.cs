@@ -61,6 +61,7 @@ namespace Planet_DevopsProject
                 Console.WriteLine("The result is {0}", result);
 
                 Console.ReadLine();
+                Console.Clear();
             }
 
             
