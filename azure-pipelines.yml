@@ -59,16 +59,18 @@ steps:
 
 
 
+
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+  displayName: 'Publish the project - $(buildConfiguration)'
   inputs:
-    command: publish
+    command: 'publish'
+    projects: '**/*.csproj'
     publishWebProjects: false
-    projects: 'Planet_DevopsProject/Planet_DevopsProject/Planet_DevopsProject.csproj'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
 
 
 
 - task: PublishBuildArtifacts@1
-  displayName: 'publish artifacts'
+  displayName: 'Publish Artifact: drop'
+  condition: succeeded()
